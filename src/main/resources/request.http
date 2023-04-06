@@ -71,7 +71,7 @@ Content-Type: application/json
 ###
 DELETE http://localhost:8888/book/1
 
-### bookStore
+### bookStoreService
 
 GET http://localhost:8888/bookStore/simpleList
 
