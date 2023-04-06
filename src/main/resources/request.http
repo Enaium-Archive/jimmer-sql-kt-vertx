@@ -24,7 +24,7 @@ DELETE http://localhost:8888/author/1
 GET http://localhost:8888/book/simpleList
 
 ###
-GET http://localhost:8888/book/list
+GET http://localhost:8888/book/list?pageIndex=0&pageSize=3
 
 ###
 GET http://localhost:8888/book/1

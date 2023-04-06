@@ -21,7 +21,6 @@ fun findSimpleBooks(context: RoutingContext) {
 fun findBooks(context: RoutingContext) {
   val pageIndex = context.request().getParam("pageIndex", "0").toInt()
   val pageSize = context.request().getParam("pageSize", "5").toInt()
-  val sortCode = context.request().getParam("sortCode")
   val name = context.request().getParam("name")
   val storeName = context.request().getParam("storeName")
   val authorName = context.request().getParam("authorName")
@@ -46,7 +45,7 @@ fun findBooks(context: RoutingContext) {
       )
     }
     select(table.fetch(DEFAULT_FETCHER))
-  })
+  }.limit(pageSize, pageIndex).execute())
 }
 
 fun findComplexBook(context: RoutingContext) {
