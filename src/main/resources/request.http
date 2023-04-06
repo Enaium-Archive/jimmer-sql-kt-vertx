@@ -1,0 +1,156 @@
+### authorService
+GET http://localhost:8888/author/simpleList
+
+###
+GET http://localhost:8888/author/list?firstName=Samer
+
+###
+GET http://localhost:8888/author/1
+
+###
+PUT http://localhost:8888/author
+Content-Type: application/json
+
+{
+  "firstName": "123",
+  "lastName": "",
+  "gender": "FEMALE"
+}
+
+###
+DELETE http://localhost:8888/author/1
+
+### bookService
+GET http://localhost:8888/book/simpleList
+
+###
+GET http://localhost:8888/book/list
+
+###
+GET http://localhost:8888/book/1
+
+###
+PUT http://localhost:8888/book
+Content-Type: application/json
+
+{
+  "name": "How to make a tnt cannon",
+  "edition": 1,
+  "price": 0.99,
+  "storeId": 1,
+  "authorIds": [
+    1,
+    2,
+    3
+  ],
+  "tenant": "a"
+}
+
+###
+PUT http://localhost:8888/book/composite
+Content-Type: application/json
+
+{
+  "name": "How to make a tnt cannon",
+  "edition": 1,
+  "price": 0.99,
+  "store": {
+    "name": "Villager",
+    "website": "www.enaium.cn"
+  },
+  "authors": [
+    {
+      "firstName": "fn",
+      "lastName": "ln",
+      "gender": "FEMALE"
+    }
+  ],
+  "tenant": "a"
+}
+
+###
+DELETE http://localhost:8888/book/1
+
+### bookStore
+
+GET http://localhost:8888/bookStore/simpleList
+
+###
+GET http://localhost:8888/bookStore/list
+
+###
+GET http://localhost:8888/booksStore/1/withAllBooks
+
+###
+GET http://localhost:8888/booksStore/1/withNewestBooks
+
+###
+PUT http://localhost:8888/booksStore
+Content-Type: application/json
+
+{
+  "name": "How to make a tnt cannon",
+  "website": "www.enaium.cn"
+}
+
+###
+DELETE http://localhost:8888/booksStore/1
+
+### treeService
+GET http://localhost:8888/tree/roots/recursive?rootName=Home
+
+###
+PUT http://localhost:8888/tree/root/recursive
+Content-Type: application/json
+
+{
+  "name": "1",
+  "childNodes": [
+    {
+      "name": "q",
+      "childNodes": [
+        {
+          "name": "2",
+          "childNodes": [
+            {
+              "name": "3",
+              "childNodes": [
+                {
+                  "name": "l",
+                  "childNodes": [
+                    {
+                      "name": "y",
+                      "childNodes": [
+                        {
+                          "name": "c",
+                          "childNodes": [
+                            {
+                              "name": "4",
+                              "childNodes": [
+                                {
+                                  "name": "5",
+                                  "childNodes": [
+                                    {
+                                      "name": "j"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+###
+DELETE http://localhost:8888/tree/tree/1
