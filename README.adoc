@@ -1,6 +1,7 @@
-= Jimmer-vertx
+= jimmer-sql-kt-vertx
 
 image:https://img.shields.io/badge/vert.x-4.4.1-purple.svg[link="https://vertx.io"]
+image:https://img.shields.io/badge/jimmer-0.7.20-green.svg[link="https://vertx.io"]
 
 This application was generated using http://start.vertx.io
 
@@ -28,5 +29,5 @@ To run your application:
 * https://groups.google.com/forum/?fromgroups#!forum/vertx[Vert.x User Group]
 * https://discord.gg/6ry7aqPWXy[Vert.x Discord]
 * https://gitter.im/eclipse-vertx/vertx-users[Vert.x Gitter]
-
+* https://babyfish-ct.github.io/jimmer[Jimmer Documentation]
 
