@@ -82,3 +82,9 @@ tasks.withType<JavaExec> {
     "--on-redeploy=$doOnChange"
   )
 }
+
+kotlin {
+  sourceSets.main {
+    kotlin.srcDir("build/generated/ksp/main/kotlin")
+  }
+}
